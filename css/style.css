@@ -8,6 +8,7 @@
   --footer-color: #2f303a;
   --links-color: rgba(255, 255, 255, 0.6);
   --font-weight-title: 700;
+  --main-margin: 30px;
 }
 body {
   background: var(--primary-white-color);
@@ -27,15 +28,12 @@ h6,
 p {
   margin: 0;
 }
-section {
-  background: tomato;
-}
+
 .container {
   width: 1200px;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
-  background: grey;
 }
 .link {
   text-decoration: none;
@@ -47,7 +45,13 @@ section {
   padding: 0;
 }
 /* header */
-
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+.header {
+  border-bottom: 1px solid #ececec;
+}
 .logo {
   color: var(--black-color);
 
@@ -61,7 +65,18 @@ section {
   color: var(--accent-color);
 }
 /* site nav */
+.nav {
+  display: flex;
+  margin-left: 93px;
+}
+.nav-item + .nav-item {
+  margin-left: 50px;
+}
 .nav-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--title-text-color);
   font-weight: 500;
   line-height: 1.1;
@@ -73,6 +88,13 @@ section {
 }
 .nav-link.current {
   color: var(--accent-color);
+}
+.contacts {
+  display: flex;
+  margin-left: auto;
+}
+.contacts-item + .contacts-item {
+  margin-left: 50px;
 }
 .contacts-link {
   color: var(--primary-text-color);
@@ -86,6 +108,9 @@ section {
 }
 /* hero */
 .hero {
+  text-align: center;
+}
+.hero-container {
   background: var(--footer-color);
 }
 .hero-title {
@@ -94,16 +119,18 @@ section {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.4;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 
-  margin-bottom: 30px;
+  margin-bottom: var(--main-margin);
 }
 /* section */
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
+}
+.section:nth-child(3) {
+  padding-top: 0;
 }
 .section-title {
   color: var(--title-text-color);
@@ -115,6 +142,10 @@ section {
   margin-bottom: 50px;
 }
 /* features */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+}
 .features-title {
   color: var(--title-text-color);
 
@@ -124,19 +155,44 @@ section {
   text-transform: uppercase;
   margin-bottom: 10px;
 }
-/* we do */
+.features-item {
+  width: 270px;
+  background: #fff;
+  margin-right: var(--main-margin);
+}
+.features-item:nth-child(4n) {
+  margin-right: 0;
+}
+/* we-do */
 .we-do {
-  padding-top: 0;
+  display: flex;
+}
+.we-do-item {
+  margin-right: var(--main-margin);
+}
+.we-do-item:nth-child(3n) {
+  margin-right: 0;
 }
 
 /* team */
+.team-section {
+  background: var(--additional-color-section);
+}
 .team {
   font-size: 16px;
   line-height: 1.2;
   text-align: center;
+
+  display: flex;
+}
+.team-item {
+  margin-right: var(--main-margin);
+}
+.team-item :nth-child(4n) {
+  margin-right: 0;
 }
 .team-img {
-  margin-bottom: 30px;
+  margin-bottom: var(--main-margin);
 }
 .team-title {
   color: var(--title-text-color);
@@ -149,6 +205,8 @@ section {
 /* footer */
 .footer {
   background: var(--footer-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .footer-logo {
   color: var(--primary-white-color);
@@ -158,10 +216,18 @@ section {
 .address {
   color: var(--primary-white-color);
   font-style: normal;
+  margin-bottom: 9px;
+}
+.footer-item {
+  margin-bottom: 9px;
+}
+.footer-item:last-child {
+  margin-bottom: 0;
 }
 .list-link {
   color: var(--links-color);
 }
+
 .list-link:hover,
 .list-link:focus {
   color: var(--accent-color);
@@ -182,8 +248,8 @@ section {
 }
 .button.primary:hover,
 .button.primary:focus {
-  color: var(--accent-color);
-  background: var(--primary-white-color);
+  color: var(--primary-white-color);
+  background: #188ce8;
 }
 .button.secondary {
   color: var(--title-text-color);
@@ -197,11 +263,39 @@ section {
 
 /* portfolio */
 .btn {
+  display: flex;
+  justify-content: center;
+
   margin-bottom: 50px;
 }
-.progects-img {
-  margin-bottom: 20px;
+.btn-item {
+  margin-right: 8px;
 }
+.btn-item:nth-child(5n) {
+  margin-right: 0;
+}
+/* progects */
+.progects {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-right: -30px;
+  margin-bottom: -30px;
+}
+.progects-item {
+  width: 370px;
+  margin-right: var(--main-margin);
+  margin-bottom: var(--main-margin);
+
+  border: 1px solid #eeeeee;
+}
+.progects-wrap {
+  padding-top: 20px;
+  padding-right: 24px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+}
+
 .progects-title {
   color: var(--title-text-color);
   font-weight: var(--font-weight-title);
