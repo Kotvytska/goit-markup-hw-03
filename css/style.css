@@ -19,6 +19,7 @@ body {
   letter-spacing: 0.03em;
   line-height: 1.7;
 }
+
 h1,
 h2,
 h3,
@@ -29,6 +30,9 @@ p {
   margin: 0;
 }
 
+img {
+  display: block;
+}
 .container {
   width: 1200px;
   margin: 0 auto;
@@ -185,15 +189,19 @@ p {
 
   display: flex;
 }
+.team-wrap {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
 .team-item {
   margin-right: var(--main-margin);
 }
 .team-item :nth-child(4n) {
   margin-right: 0;
 }
-.team-img {
+/* .team-img {
   margin-bottom: var(--main-margin);
-}
+} */
 .team-title {
   color: var(--title-text-color);
   font-weight: 500;
@@ -282,18 +290,22 @@ p {
   margin-right: -30px;
   margin-bottom: -30px;
 }
+
 .progects-item {
   width: 370px;
   margin-right: var(--main-margin);
   margin-bottom: var(--main-margin);
 
-  border: 1px solid #eeeeee;
+  /* border: 1px solid #eeeeee; */
 }
 .progects-wrap {
   padding-top: 20px;
   padding-right: 24px;
   padding-bottom: 20px;
   padding-left: 24px;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
 }
 
 .progects-title {
